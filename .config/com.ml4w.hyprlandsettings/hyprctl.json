@@ -1,0 +1,18 @@
+[
+    {
+        "key": "general:gaps_in",
+        "value": 5
+    },
+    {
+        "key": "general:gaps_out",
+        "value": 10
+    },
+    {
+        "key": "decoration:dim_strength",
+        "value": 0.5
+    },
+    {
+        "key": "general:col.inactive_border",
+        "value": "rgb(77767b)"
+    }
+]

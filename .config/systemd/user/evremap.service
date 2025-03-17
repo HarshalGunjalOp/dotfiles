@@ -1,0 +1,10 @@
+[Unit]
+Description=evremap key remapper
+After=default.target
+
+[Service]
+ExecStart=/usr/bin/evremap remap /home/harshal/.config/evremap/config.toml
+Restart=always
+
+[Install]
+WantedBy=default.target
