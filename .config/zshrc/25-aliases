@@ -63,3 +63,5 @@ alias setkb='setxkbmap de;echo "Keyboard set back to de."'
 # -----------------------------------------------------
 alias vim='nvim'
 alias mkdir='mkdir -p'
+alias cls="clear"
+alias nano="nvim"
