@@ -27,6 +27,7 @@ __pycache__/
 .config/google-chrome*
 .config/BraveSoftware/
 .config/Postman/
+.config/discord
 
 # Ignore large or unnecessary folders
 .config/libreoffice/
