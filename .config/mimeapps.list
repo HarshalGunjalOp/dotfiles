@@ -1,0 +1,35 @@
+[Default Applications]
+text/html=zen.desktop
+x-scheme-handler/http=zen.desktop
+x-scheme-handler/https=zen.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+inode/directory=thunar.desktop
+application/x-wayland-gnome-saved-search=thunar.desktop
+x-scheme-handler/postman=Postman.desktop
+x-scheme-handler/chrome=zen.desktop
+application/x-extension-htm=zen.desktop
+application/x-extension-html=zen.desktop
+application/x-extension-shtml=zen.desktop
+application/xhtml+xml=zen.desktop
+application/x-extension-xhtml=zen.desktop
+application/x-extension-xht=zen.desktop
+application/vnd.sqlite3=SQLiteStudio.desktop
+text/plain=nvim.desktop
+
+[Added Associations]
+application/pdf=nightpdf.desktop;libreoffice-draw.desktop;google-chrome.desktop;
+text/x-python=libreoffice-writer.desktop;nvim.desktop;
+x-scheme-handler/http=zen.desktop;
+x-scheme-handler/https=zen.desktop;
+x-scheme-handler/chrome=zen.desktop;
+text/html=zen.desktop;
+application/x-extension-htm=zen.desktop;
+application/x-extension-html=zen.desktop;
+application/x-extension-shtml=zen.desktop;
+application/xhtml+xml=zen.desktop;
+application/x-extension-xhtml=zen.desktop;
+application/x-extension-xht=zen.desktop;
+image/jpeg=sxiv.desktop;feh.desktop;org.gnome.Loupe.desktop;org.geeqie.Geeqie.desktop;
+application/x-ipynb+json=code.desktop;
+text/plain=nvim.desktop;

@@ -1,0 +1,45 @@
+# Ignore all user data, caches, logs
+.cache/
+.local/
+Trash/
+*.bak
+*.swp
+*.tmp
+*.lock
+*.log
+*.pyc
+*.DS_Store
+__pycache__/
+
+# Ignore backup folders
+.config/*backup*/
+.config/*Back-up*/
+.config/*backup**/
+
+# Ignore Electron and VSCode stuff
+.config/Electron/
+.config/Code/
+.config/Cursor/
+.config/discord/
+.config/zoom/
+.config/zoomus.conf
+.config/Google/
+.config/google-chrome*
+.config/BraveSoftware/
+.config/Postman/
+
+# Ignore large or unnecessary folders
+.config/libreoffice/
+.config/VirtualBox/
+.config/Kvantum/
+.config/yay/
+.config/procps/
+.config/gtk-3.0/
+.config/QtProject*/
+.config/org.gnome.Ptyxis/
+
+# Ignore session + history files
+.config/session/
+.config/waydroid/
+.zsh_history
+.bash_history

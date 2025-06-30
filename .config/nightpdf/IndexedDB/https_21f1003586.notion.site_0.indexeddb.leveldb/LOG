@@ -1,0 +1,6 @@
+2025/04/04-16:47:00.141 4150f Creating DB /home/harshal/.config/nightpdf/IndexedDB/https_21f1003586.notion.site_0.indexeddb.leveldb since it was missing.
+2025/04/04-16:47:00.142 4150f Reusing MANIFEST /home/harshal/.config/nightpdf/IndexedDB/https_21f1003586.notion.site_0.indexeddb.leveldb/MANIFEST-000001
+2025/04/04-16:47:01.066 414fe Level-0 table #5: started
+2025/04/04-16:47:01.068 414fe Level-0 table #5: 2659 bytes OK
+2025/04/04-16:47:01.068 414fe Delete type=0 #3
+2025/04/04-16:47:01.069 414fe Manual compaction at level-0 from '\x00\x01\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x02\x00\x00\x00' @ 0 : 0; will stop at (end)

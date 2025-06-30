@@ -1,0 +1,10 @@
+CNNs
+Cheatsheet
+NLP
+NLU
+Numpy
+ThePrimeagen
+chatbot
+convolutional
+summarization
+checksum_v1 = 223ee7c69482f1c3eb53d32c6f9a00e4
