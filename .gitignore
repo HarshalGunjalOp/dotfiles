@@ -47,3 +47,4 @@ __pycache__/
 .config/waydroid/
 .zsh_history
 .bash_history
+.docker/
