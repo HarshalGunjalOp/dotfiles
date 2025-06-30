@@ -43,10 +43,10 @@ process-unmapped-keys yes
 
 (deflayermap (base)
  ;; define home row mods (they act as typing-layer triggers, too )
- f (t! homerowmod $tot 160 f lsft)
- j (t! homerowmod $tot 160 j rsft)
- d (t! homerowmod $tot 300 d lctl)
- k (t! homerowmod $tot 300 k rctl)
+ f (t! homerowmod $tot 160 f lctl)
+ j (t! homerowmod $tot 160 j rctl)
+ d (t! homerowmod $tot 300 d lsft)
+ k (t! homerowmod $tot 300 k rsft)
  s (t! homerowmodfiltered $tot 400 s lalt (a)) ;; example fix of the 'as' role 
  l (t! homerowmod $tot 400 l ralt)
  a (t! homerowmod $tot 450 a lmet)
