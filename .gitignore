@@ -24,7 +24,7 @@ __pycache__/
 .config/zoom/
 .config/zoomus.conf
 .config/Google/
-.config/google-chrome*
+.config/google-chrome/
 .config/BraveSoftware/
 .config/Postman/
 .config/discord/
