@@ -1,14 +1,14 @@
 (defcfg
 process-unmapped-keys yes 
 )
-;; timeings should work fine for 40 to 80 words per minute; if you are slower or new to home row mods increasing them might help in getting started   
+;; timings should work fine for 40 to 80 words per minute; if you are slower or new to home row mods increasing them might help in getting started   
 
 (defvirtualkeys
   to-base (layer-switch base)
 )
 
 (defvar
-  tot 200  ;; tot=time out tap
+  tot 220  ;; tot=time out tap
 )
 
 (deftemplate homerowmod (timeouttap timeouthold keytap keyhold)
@@ -36,41 +36,74 @@ process-unmapped-keys yes
               (on-idle 55 tap-vkey to-base) ;; timeouts from 30 to 100 are wide spread
             ) break
       )
-  .spc-typing   (multi (layer-switch base) spc) ;; expilcitly leave typing-layer when hitting `space` - this allows experimenting with higher idle timeouts
+  .spc-typing   (multi (layer-switch base) spc) ;; explicitly leave typing-layer when hitting `space` - this allows experimenting with higher idle timeouts
 )
 
-(defsrc )
+(defsrc 
+  ;; Add all the keys you're using
+  lalt lmet tab caps
+  q w e r t y u i o p 
+  a s d f g h j k l ;
+  z x c v b n m , . /
+  spc
+)
 
 (deflayermap (base)
- ;; define home row mods (they act as typing-layer triggers, too )
- f (t! homerowmod $tot 160 f lctl)
- j (t! homerowmod $tot 160 j rctl)
- d (t! homerowmod $tot 300 d lsft)
- k (t! homerowmod $tot 300 k rsft)
+ ;; SWAPPED Physical Alt/Meta keys
+ lalt lmet  ;; Physical left Alt now sends left Meta
+ lmet lalt  ;; Physical left Meta now sends left Alt
+
+ ;; Tab key with dual function - FIXED: Using layer-while-held instead of layer-switch
+ tab (tap-hold $tot 200 tab (layer-while-held arrows))
+
+ ;; Caps lock tap-hold - FIXED: Added caps to defsrc
+ caps (tap-hold $tot 200 esc lctl)
+
+ ;; Home row mods (unchanged)
+ f (t! homerowmod $tot 160 f lsft)
+ j (t! homerowmod $tot 160 j rsft)
+ d (t! homerowmod $tot 300 d lctl)
+ k (t! homerowmod $tot 300 k rctl)
  s (t! homerowmodfiltered $tot 400 s lalt (a)) ;; example fix of the 'as' role 
  l (t! homerowmod $tot 400 l ralt)
  a (t! homerowmod $tot 450 a lmet)
  ; (t! homerowmod $tot 450 ; rmet)
- 
- ;; Requested changes:
- ;; 1. Swap alt and win keys
- lalt lmet
- ralt rmet
- lmet lalt
- rmet ralt
- 
- ;; 2. Remap capslock to backspace
- caps esc
- 
- ;; 3. Remap shift keys to escape
- lsft bspc
- 
- ;; define each letter as typing-layer trigger
+
+ ;; Letters as typing-layer triggers
  q (multi q @.tp) w (multi w @.tp) e (multi e @.tp) r (multi r @.tp) t (multi t @.tp) y (multi y @.tp) u (multi u @.tp) i (multi i @.tp) o (multi o @.tp) p (multi p @.tp) g (multi g @.tp) h (multi h @.tp) z (multi z @.tp) x (multi x @.tp) c (multi c @.tp) v (multi v @.tp) b (multi b @.tp) n (multi n @.tp) m (multi m @.tp) 
+
+ spc spc
 )
 
 (deflayermap (typing) 
+ ;; Keep swapped keys in typing layer
+ lalt lmet
+ lmet lalt
+ 
+ ;; Letters pass through normally
  a a b b c c d d e e f f g g h h i i j j k k l l m m n n o o p p q q r r s s t t u u v v w w x x y y z z 
  caps XX ;; key deactivations of caps,... are optional
+ tab XX  ;; Disable tab functionality in typing layer
+ spc spc
+)
+
+;; New arrow layer - FIXED: All non-arrow keys set to XX (transparent)
+(deflayermap (arrows)
+  ;; Keep swapped keys in arrow layer  
+  lalt lmet
+  lmet lalt
+  
+  ;; Arrow mappings
+  h left     ;; H → Left arrow
+  j down     ;; J → Down arrow
+  k up       ;; K → Up arrow
+  l right    ;; L → Right arrow
+  
+  ;; Make all other keys transparent so they don't interfere
+  q XX w XX e XX r XX t XX y XX u XX i XX o XX p XX
+  a XX s XX d XX f XX g XX ; XX
+  z XX x XX c XX v XX b XX n XX m XX , XX . XX / XX
+  caps XX
+  spc XX
 )
 
