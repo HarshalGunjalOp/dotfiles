@@ -90,3 +90,7 @@ export PATH="/home/harshal/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/h
 export AIPIPE_TOKEN="eyJhbGciOiJIUzI1NiJ9.eyJlbWFpbCI6IjIzZjIwMDE2MjdAZHMuc3R1ZHkuaWl0bS5hYy5pbiJ9.s9Dg_CfWzxrZIH3As1HsgSkrU52A-nxrGcCY55o6sm8"
 export OPENAI_API_KEY="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"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/root/.cargo/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="/root/.cargo/bin:$PATH"
+export PATH="/var/lib/snapd/snap/bin:$PATH"
