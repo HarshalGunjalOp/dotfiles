@@ -48,3 +48,4 @@ __pycache__/
 .zsh_history
 .bash_history
 .docker/
+Docker.raw
